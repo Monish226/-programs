@@ -1,46 +1,32 @@
-
-#include<stdio.h>
- 
+#include <iostream>
+using namespace std;
 int main()
 {
- 	int i, j, r, c, a[10][10], b[10][10];
- 	int arr[10][10];
-    printf("\n  Enter Number of rows and columns  :  ");
- 	scanf("%d %d", &i, &j);
- 
- 	printf("\n  Enter the First Elements\n");
- 	for(r = 0; r < i; r++)
-  	{
-  		for(c = 0; c < j; c++)
-    	{
-      		scanf("%d", &a[r][c]);
-    	}
-    	}
-   
- 	printf("\n  Enter the Second Elements\n");
- 	for(r = 0; r < i; r++)
-  	{
-  		for(c = 0; c < j; c++)
-    	{
-      		scanf("%d", &b[r][c]);
-    	}
-  	}
-  	for(r = 0; r < i; r++)
-  	{
-  		for(c = 0; c < j; c++)
-    	{
-      		arr[r][c] = a[r][c] + b[r][c];    
-   	 	}
-  	}
-  	printf("\n The Sum of Two matrices is: \n");
- 	for(r = 0; r < i; r++)
-  	{
-  		for(c = 0; c < j; c++)
-    	{
-      		printf("%d \t ", arr[r][c]);
-    	}
-    	printf("\n");
-  	}
-  	return 0;
-  }
-  	
+ int a[10][10],b[10][10], c[10][10] ,row, col,i,j;
+cout<<"Enter the number of rows : ";
+cin>>row;
+cout<<"Enter the number of column : ";
+cin>>col;
+cout<<"enter A matrix element : "; 
+ for ( i = 0;i<row;i++ ) {
+ for ( j = 0;j <col;j++ ) {
+cin>>a[i][j];
+ }
+ }
+cout<<"enter B matrix element : "; 
+ for ( i = 0;i<row;i++ ) {
+ for ( j = 0;j<col;j++ ) {
+cin>>b[i][j];
+ }
+ }
+cout<<"ADDITION OF MATRIX A&B : \n";
+ for ( i = 0;i<row;i++ ) {
+ for ( j = 0;j<col;j++ ) {
+ c[i][j]=a[i][j]+b[i][j];
+cout<<c[i][j];
+cout<<" ";
+}
+cout<<"\n";
+ }
+ return 0;
+}
